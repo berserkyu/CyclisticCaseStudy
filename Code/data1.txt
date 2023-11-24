@@ -1,0 +1,81 @@
+# load data1
+# the directory of the CSV files to read
+dir1 <- r"(D:\School\Reading\Google Data Analytic Cert\Case Study\03 BikeSharing\Data\format1)"
+files_format1 <- list.files(path=dir1, pattern=NULL, all.files=FALSE,
+                            full.names=FALSE)
+
+files_format1
+data1= data.frame()
+for (file in files_format1){
+  data1 <- rbind(data1,data.frame(read_csv(paste(dir1,"\\",file,sep=""))))
+  #head(data_raw,5)
+  
+}
+
+glimpse(data1)
+nrow(data1)
+
+# clean data1 station names
+data1$from_station_name <-  cleanStationName(data1$from_station_name)
+data1$to_station_name <-  cleanStationName(data1$to_station_name)
+
+unique(data1$from_station_name)
+sort(unique(data1$to_station_name))
+temp <- data.frame(sort(unique(data1$to_station_name)))
+tdir <- r"(D:\School\Reading\Google Data Analytic Cert\Case Study\03 BikeSharing\to_station_cleaned.csv)"
+write.csv(temp,tdir)
+
+n1 <- length(h1)
+n2 <- length(h2)
+
+# change data1 station ids
+# also include new station info
+for(i in 1:nrow(data1)){
+  print(i)
+  start_station <- data1$from_station_name[i]
+  end_station <- data1$to_station_name[i]
+  start_id <- data1$from_station_id[i]
+  end_id <- data1$to_station_id[i]
+  
+  if(!is.na(start_station)){
+    # if the station name is in record, change the id
+    if(!is.na(h2[start_station])){
+      data1$from_station_id[i] <- h2[start_station]
+    # else create new mapping(for the id is not NA)
+    }else if(!is.na(start_id)){
+      # if the id is taken, generate a new one
+      if(!is.na(h1[start_id])){
+        start_id <-  1
+        while(!is.na(h1[start_id])){
+          start_id <- start_id + 1
+        }
+      }
+      # store the new mapping
+      h1[start_id] <- start_station
+      h2[start_station] <- start_id
+    }
+  }
+  
+  if(!is.na(end_station)){
+    # if the station name is in record, change the id
+    if(!is.na(h2[end_station])){
+      data1$from_station_id[i] <- h2[end_station]
+      # else create new mapping(for the id is not NA)
+    }else if(!is.na(end_id)){
+      # if the id is taken, generate a new one
+      if(!is.na(h1[end_id])){
+        end_id <-  1
+        while(!is.na(h1[end_id])){
+          end_id <- end_id + 1
+        }
+      }
+      # store the new mapping
+      h1[end_id] <- end_station
+      h2[end_station] <- end_id
+    }
+  }
+}
+n1
+length(h1)
+n2
+length(h2)
