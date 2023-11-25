@@ -332,37 +332,20 @@ them.
     usage
 
 <center>
-
-<figure>
-<img src="Pics/viz/T1.png" style="width:80.0%" alt="Trend1" />
-<figcaption aria-hidden="true">Trend1</figcaption>
-</figure>
-
+<img src="Pics/viz/T1.png" style="width:80.0%" />
 </center>
 Linear regression to observe the relationship of temperature and daily
 usage
 <center>
-
-<figure>
-<img src="Pics/viz/T1_b.png" style="width:65.0%"
-alt="Trend1 regression" />
-<figcaption aria-hidden="true">Trend1 regression</figcaption>
-</figure>
-
+<img src="Pics/viz/T1_b.png" style="width:65.0%" />
 </center>
 
 ------------------------------------------------------------------------
 
 -   Trend 2: Casual users & member users have varying average usage
     distribution in a day.
-
     <center>
-
-    <figure>
-    <img src="Pics/viz/T2.png" style="width:65.0%" alt="Trend2" />
-    <figcaption aria-hidden="true">Trend2</figcaption>
-    </figure>
-
+    <img src="Pics/viz/T2.png" style="width:65.0%" />
     </center>
 
 ------------------------------------------------------------------------
@@ -372,12 +355,7 @@ alt="Trend1 regression" />
     and less on weekends.
 
 <center>
-
-<figure>
-<img src="Pics/viz/T3.png" style="width:75.0%" alt="Trend3" />
-<figcaption aria-hidden="true">Trend3</figcaption>
-</figure>
-
+<img src="Pics/viz/T3.png" style="width:75.0%" />
 </center>
 
 Comparison of daily riding pattern across weeks: only on weekends their
@@ -385,26 +363,15 @@ distribution resemble, further verifying the insight that member users
 focus more on commutation while casual users focus less
 
 <center>
-
-<figure>
-<img src="Pics/viz/T2_aa2.png" style="width:70.0%" alt="Trend3 Daily" />
-<figcaption aria-hidden="true">Trend3 Daily</figcaption>
-</figure>
-
+<img src="Pics/viz/T2_aa2.png" style="width:70.0%" />
 </center>
 
 ------------------------------------------------------------------------
 
 -   Relationship 2: member has slightly shorter & less variable ride
     duration on average compared to casual usage
-
     <center>
-
-    <figure>
-    <img src="Pics/viz/R2.png" style="width:50.0%" alt="Trend3 Daily" />
-    <figcaption aria-hidden="true">Trend3 Daily</figcaption>
-    </figure>
-
+    <img src="Pics/viz/R2.png" style="width:50.0%" />
     </center>
 
 ------------------------------------------------------------------------
@@ -420,13 +387,7 @@ focus more on commutation while casual users focus less
     casual activities.
 
 <center>
-
-<figure>
-<img src="Pics/viz/insights.png" style="width:85.0%"
-alt="Trend3 Daily" />
-<figcaption aria-hidden="true">Trend3 Daily</figcaption>
-</figure>
-
+<img src="Pics/viz/insights.png" style="width:85.0%" />
 </center>
 
 # Recommendations
